@@ -21,8 +21,6 @@ const initialCart = (): CartItem[] => {
   return localStorageCart ? JSON.parse(localStorageCart) : [];
 };
 
-
-
 export const initialState: CartState = {
   data: db,
   cart: initialCart()
@@ -94,8 +92,6 @@ export const cartReducer = (
       cart
     };
   }
-
-
 
   if (action.type === 'increase-quantity') {
     const cart = state.cart.map(item => {
